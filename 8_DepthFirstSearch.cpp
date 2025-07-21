@@ -24,7 +24,7 @@ int main() {
         graph[b].push_back(a);
     }
 
-    vector<int>visited(8);
+    vector<int>visited(9);
     cout << "********DEPTH FIRST SEARCH***********" << endl;
     dfs(1,graph,8,visited);
    
