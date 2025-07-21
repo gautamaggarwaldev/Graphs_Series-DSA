@@ -57,4 +57,9 @@ public:
 };
 int main()
 {
+    Solution Sol;
+    int n = 6;
+    vector<int>KnightPos = {4,5};
+    vector<int>targetPos = {1,1};
+    cout << Sol.minStepToReachTarget(KnightPos,targetPos,n) << endl;
 }
