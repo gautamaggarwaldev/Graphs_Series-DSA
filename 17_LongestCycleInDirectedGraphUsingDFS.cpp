@@ -10,7 +10,7 @@ public:
         visited[node] = 1;
         currPath[node] = currLen;
 
-        int nebr = edges[node];
+        int nebr = edges[node];  // Get the next neighbor (if exists)
         if (nebr != -1)
         {
             if (visited[nebr] != 1)
@@ -19,14 +19,14 @@ public:
             }
             else
             {
-                if (currPath[nebr] != 0)
+                if (currPath[nebr] != 0) // If neighbor is visited and part of current path, cycle is detected
                 {
                     int len = currPath[node] - currPath[nebr] + 1;
                     longestCycleLen = max(longestCycleLen, len);
                 }
             }
         }
-        currPath[node] = 0;
+        currPath[node] = 0; // Backtrack: remove node from current DFS path
     }
     int longestCycle(vector<int> &edges)
     {
