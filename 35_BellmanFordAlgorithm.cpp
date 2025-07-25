@@ -45,6 +45,7 @@ public:
                 return {-1};
             }
         }
+        return dist;
     }
 };
 
